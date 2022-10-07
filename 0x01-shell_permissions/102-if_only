@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l ./hello | grep -q guillaume; if [ $? = 0 ]; then chown betty ./hello 
+chown --from=guillaume betty ./hello 
