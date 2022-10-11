@@ -1,0 +1,23 @@
+total 84
+drwxr-xr-x 2 root root 4096 Oct 10 17:27 .
+drwxr-xr-x 6 root root  121 Oct 10 14:51 ..
+-rwxr--r-- 1 root root   32 Oct 10 15:00 0-hello_world
+-rwxr--r-- 1 root root   50 Oct 10 17:02 10-no_more_js
+-rwxr--r-- 1 root root   52 Oct 10 17:22 11-directories
+-rwxr--r-- 1 root root   39 Oct 10 17:11 12-newest_files
+-rwxr--r-- 1 root root   32 Oct 10 15:52 13-unique
+-rwxr--r-- 1 root root   36 Oct 10 15:55 14-findthatword
+-rwxr--r-- 1 root root   39 Oct 10 15:57 15-countthatowrd
+-rwxr--r-- 1 root root   38 Oct 10 15:58 17-hidethisword
+-rwxr--r-- 1 root root   21 Oct 10 16:01 19-AZ
+-rwxr--r-- 1 root root   21 Oct 10 16:03 20-hiago
+-rwxr--r-- 1 root root   16 Oct 10 16:39 21-reverse
+-rwxr--r-- 1 root root   28 Oct 10 15:05 2-hellofile
+-rwxr--r-- 1 root root   39 Oct 10 15:15 3-twofiles
+-rwxr--r-- 1 root root   29 Oct 10 15:18 4-lastlines
+-rwxr--r-- 1 root root   29 Oct 10 15:19 5-firstlines
+-rwxr--r-- 1 root root   40 Oct 10 15:39 6-third_line
+-rwxr--r-- 1 root root   46 Oct 10 17:25 8-cwd_state
+-rwxr--r-- 1 root root   47 Oct 10 15:50 9-duplicate_last_line
+-rw-r--r-- 1 root root 1124 Oct 10 17:27 ls_cwd_content
+-rw-r--r-- 1 root root   84 Oct 10 16:41 README.md
