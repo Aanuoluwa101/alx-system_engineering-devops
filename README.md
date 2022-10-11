@@ -1,1 +1,1 @@
-This is a reopsitory containing shell scripts
+This is a readme file for the alx system engineering Devops repository

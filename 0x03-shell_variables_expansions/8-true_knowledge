@@ -1,0 +1,2 @@
+#!/bin/bash
+TRUEKNOWLEDGE=$(($TRUEKNOWLDEGE + 128))
