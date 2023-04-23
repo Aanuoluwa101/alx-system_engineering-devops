@@ -1,10 +1,14 @@
-file { '~/.ssh/config':
-    ensure  => 'present',
-    content => '
-      Host my_server
-          HostName 35.175.126.170 
-          IdentityFile ~/.ssh/school
-          PasswordAuthentication no 
-    ',
-    mode    => '0600'
+# modify client-side config file
+include stdlib
+
+file_line {
+    'password_authentication':
+        ensure => present,
+        path   => '~/.ssh/config',
+        line   => '    PasswordAuthentication no'
+    ;
+    'file_location':
+        ensure => present,
+        path   => '~/.ssh/config',
+        line   => '    IdentityFile ~/.ssh/school'
 }
