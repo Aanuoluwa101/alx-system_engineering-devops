@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sed -i '/server_name _;/a \        location /redirect_me {\n            return 301 https://placeholder.com/;\n        }\n' ./test
