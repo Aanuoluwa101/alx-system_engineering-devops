@@ -6,10 +6,11 @@ server {
         index index.html index.htm index.nginx-debian.html;
 
         server_name _;
-        location /redirect_me {
-            return 301 https://placeholder.com/;
-        }
-
+        error_page 404 /not_found.html;
+        location = /not_found.html;
+            root /usr/share/nginx/html;
+            internal;
+         }
  
         location / {
                 try_files $uri $uri/ =404;

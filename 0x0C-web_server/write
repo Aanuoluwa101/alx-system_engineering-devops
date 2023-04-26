@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-sed -i '/server_name _;/a \        location /redirect_me {\n            return 301 https://placeholder.com/;\n        }\n' ./test
+sed -i '/server_name _;/a\        error_page 404 /not_found.html;\n        location = /not_found.html;\n            root /usr/share/nginx/html;\n            internal;\n         }' ./test
