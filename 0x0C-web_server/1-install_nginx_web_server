@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# A script that installs and configures Nginx on my server
+
+# install nginx
+apt-get -y update
+apt-get -y install nginx
+
+# make nginx listen on only port 80
+ufw allow 'Nginx HTTP'
+
+# start nginx
+/etc/init.d/nginx start
+
+# replace the index.html file content 
+echo "Hello World!" > /var/www/html/index.html
+
+# restart nginx
+/etc/init.d/nginx reload
+
+
