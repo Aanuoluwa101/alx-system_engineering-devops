@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 # A script that installs and configures Nginx on my server
 
 # install nginx
