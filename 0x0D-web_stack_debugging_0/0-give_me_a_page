@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
-# a script that fixes a server
+# run apache on holbertonschool/265-0 container
 
-# install apache
-sudo apt update
-sudo apt install apache2
-
-# edit configuration file
-IP="$(curl ifconfig.me)"
-sudo sed -i "s/#ServerName www.example.com/ServerName $IP/" /etc/apache2/sites-available/000-default.conf
-
-# replace the index.html file content 
-echo "Hello Holberton" > /var/www/html/index.html
-
+echo "ServerName localhost" >> /etc/apache2.conf
+service apache2 start
