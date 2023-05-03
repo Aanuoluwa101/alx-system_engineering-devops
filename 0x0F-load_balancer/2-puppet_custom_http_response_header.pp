@@ -53,3 +53,13 @@ exec {'add_header':
   notify   => Service['nginx']
 }
 
+exec {'restart':
+  command  => 'sudo service nginx restart',
+  provider => shell,
+  require  => [
+    Exec['add_header'],
+    File['/var/www/html/index.html'],
+    Exec['redirect'],
+    Exec['error_404']
+  ]
+}
