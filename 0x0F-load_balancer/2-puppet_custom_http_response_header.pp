@@ -1,3 +1,5 @@
+# Configures a custom response header
+
 exec { 'update':
   command  => 'sudo /usr/bin/apt-get update',
   provider => shell,
