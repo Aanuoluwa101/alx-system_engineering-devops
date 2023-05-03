@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo sed -i "/server_name _;/a \        add_header X-Served-By $(hostname);" ./test
