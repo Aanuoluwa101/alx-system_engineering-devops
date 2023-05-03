@@ -15,13 +15,13 @@ service { 'nginx':
 
 file { '/var/www/html/index.html':
   ensure  => file,
-  content => 'Hello World!',
+  content => "Hello World!\n",
   require => Package['nginx'],
 }
 
 file { '/var/www/html/custom_404.html':
   ensure  => file,
-  content => "Ceci n'est pas une page",
+  content => "Ceci n'est pas une page\n",
   require => Package['nginx'],
 }
 
