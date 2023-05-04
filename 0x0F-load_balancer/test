@@ -1,2 +1,3 @@
-server_name _;
-        add_header X-Served-By 041cb9208f43;
+first line
+antoeher line
+This is the last line
