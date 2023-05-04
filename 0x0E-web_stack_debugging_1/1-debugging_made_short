@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script that fixes bugs on a nginx server
+sudo sed -i 's/8080 default_server/80 default_server/g' /etc/nginx/sites-enabled/default
+sudo service nginx restart
+sudo rm /var/run/nginx.pid
