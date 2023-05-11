@@ -6,7 +6,7 @@ defaults
 
 frontend myfrontend
   bind :80
-  bind :443 ssl crt /etc/haproxy/certs/queever.tech.pem
+  bind :443 ssl crt /etc/ssl/queever.tech.pem
   mode http
 
   acl letsencrypt-acl path_beg /.well-known/acme-challenge/
