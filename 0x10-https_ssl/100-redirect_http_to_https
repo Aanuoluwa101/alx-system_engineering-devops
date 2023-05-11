@@ -1,0 +1,24 @@
+defaults
+  mode http
+  timeout connect  5000
+  timeout client  10000
+  timeout server  10000
+
+frontend myfrontend
+  bind :80
+  bind :443 ssl crt /etc/haproxy/certs/queever.tech.pem
+  mode http
+
+  acl letsencrypt-acl path_beg /.well-known/acme-challenge/
+  use_backend letsencrypt-backend if letsencrypt-acl
+
+  redirect scheme https code 301 if !{ ssl_fc }
+  default_backend myservers
+
+backend myservers
+  balance roundrobin
+  server 184230-web-01 54.84.251.92:80
+  server 184230-web-02 54.90.50.38:80
+
+backend letsencrypt-backend
+   server letsencrypt 127.0.0.1:8888
