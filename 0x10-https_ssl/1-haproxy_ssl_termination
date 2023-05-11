@@ -12,7 +12,6 @@ frontend myfrontend
   acl letsencrypt-acl path_beg /.well-known/acme-challenge/
   use_backend letsencrypt-backend if letsencrypt-acl
 
-  redirect scheme https code 301 if !{ ssl_fc }
   default_backend myservers
 
 backend myservers
