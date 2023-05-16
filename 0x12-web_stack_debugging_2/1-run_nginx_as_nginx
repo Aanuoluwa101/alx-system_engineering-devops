@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# run nginx as nginx
+sudo chmod 644 /etc/nginx/nginx.conf; sudo sed -i 's/#user www-data/user nginx/' /etc/nginx/nginx.conf
+sudo sed -i 's/listen 80 default_server;/listen 8080 default_server;/' /etc/nginx/sites-enabled/default
+sudo sed -i 's#listen \[::\]:80 default_server ipv6only=on;#listen \[::\]:8080 default_server ipv6only=on;#' /etc/nginx/sites-enabled/default
+sudo kill "$(sudo netstat -lnp | grep '8080' | awk '{ split($NF, a, "/"); print a[1] }')"
+sudo service nginx restart
