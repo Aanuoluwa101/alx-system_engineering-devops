@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+sudo rm -r /var/lib/mysql
+sudo rm -rf /etc/mysql
+sudo apt-get autoremove
+
+
