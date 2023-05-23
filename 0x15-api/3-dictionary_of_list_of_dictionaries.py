@@ -8,6 +8,7 @@ import sys
 if __name__ == '__main__':
 
     def getTodos(employee_id):
+        """Gets the todo list of an employee"""
         url = 'https://jsonplaceholder.typicode.com/users/' + employee_id
         r = requests.get(url, verify=False)
         name = r.json().get('username')
