@@ -3,13 +3,13 @@
     todo list progress"""
 import csv
 import requests
-import sys 
+import sys
 
 if __name__ == '__main__':
     employee_id = sys.argv[1]
 
     if employee_id and int(employee_id) > 0 and int(employee_id) <= 10:
-        url = 'https://jsonplaceholder.typicode.com/users/' + employee_id 
+        url = 'https://jsonplaceholder.typicode.com/users/' + employee_id
         r = requests.get(url, verify=False)
         name = r.json().get('username')
 
@@ -27,5 +27,5 @@ if __name__ == '__main__':
             if todos:
                 for task in todos:
                     task['name'] = name
-                    writer.writerow({key: value for key, value 
+                    writer.writerow({key: value for key, value
                                      in task.items() if key != 'id'})

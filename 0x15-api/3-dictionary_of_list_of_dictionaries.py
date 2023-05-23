@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """A module that returns information about an employee's
     todo list progress"""
-import json 
+import json
 import requests
-import sys 
+import sys
 
 if __name__ == '__main__':
 
     def getTodos(employee_id):
-        url = 'https://jsonplaceholder.typicode.com/users/' + employee_id 
+        url = 'https://jsonplaceholder.typicode.com/users/' + employee_id
         r = requests.get(url, verify=False)
         name = r.json().get('username')
 
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     data = {}
     for i in range(1, 11):
         i = str(i)
-        data[i] = getTodos(i) 
+        data[i] = getTodos(i)
 
     filename = "todo_all_employees.json"
     with open(filename, 'w') as file:
