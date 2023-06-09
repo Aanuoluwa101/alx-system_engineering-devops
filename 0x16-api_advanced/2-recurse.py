@@ -8,7 +8,6 @@ import requests
 def recurse(subreddit, hot_list=[], next_page=None):
     """Request subreddit recursively using pagination
     """
-    
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     # if page specified, pass as parameter
     if next_page:
