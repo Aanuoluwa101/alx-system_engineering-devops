@@ -1,0 +1,28 @@
+#!/bin/bash
+files=()
+count=0
+
+for file in *; do
+  files["$count"]=$file
+  count=$((count+1))
+done
+
+# Initialize an empty string
+arguments=""
+
+# Loop through the remaining arguments and concatenate them
+for arg in "$@"; do
+  if [[ $arg =~ ^[0-9]+$ ]]; then
+    arguments+=" ${files[$arg]}"
+  else
+    arguments+=" $arg"
+  fi
+done
+
+if [[ $arguments =~ ^[[:space:]]*$ ]]; then
+  echo -e "\e[94mfile index out of range \e[33m:(\e[0m"
+else
+  rm $arguments
+fi
+
+
