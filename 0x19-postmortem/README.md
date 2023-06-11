@@ -1,3 +1,4 @@
+**INCIDENT REPORT PRESENTED 12TH JUNE, 2O23**
 This is a postmortem for an outage of our authentication services that happened on the 11th of June, 2023.
 **I THINK WE JAMMED THE DOOR WHILE TRYING SO HARD TO MAKE IT EASIER TO OPEN...AND MAYBE JAMMED EVERYONE'S FINGERS TOO IN THE PROCESS.**
 We truly apologize to everyone affected by this.
@@ -41,8 +42,8 @@ Our company is committed to providing the best experience to our users and we
 apologize to everyone whom has been impacted by this outage. We enjoin everyone to 
 join us in the journey as we strive even harder to provide better services.
 
-Sincerely,
-MercyMercy.
+Sincerely,  
 
+Tech Lead MercyMercy on behalf of the Development Team.
 
 
