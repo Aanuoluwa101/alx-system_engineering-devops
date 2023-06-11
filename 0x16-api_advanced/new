@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Load the LS_COLORS environment variable
+eval "$(dircolors)"
+
+# Use the color codes in your script
+echo -e "${LS_COLORS}This is a directory${LS_COLORS}"
