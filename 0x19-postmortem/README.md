@@ -1,6 +1,6 @@
-**INCIDENT REPORT PRESENTED 12TH JUNE, 2O23**
+**INCIDENT REPORT PRESENTED 12TH JUNE, 2O23**  
 This is a postmortem for an outage of our authentication services that happened on the 11th of June, 2023.
-**I THINK WE JAMMED THE DOOR WHILE TRYING SO HARD TO MAKE IT EASIER TO OPEN...AND MAYBE JAMMED EVERYONE'S FINGERS TOO IN THE PROCESS.**
+**I think we jammed the door while trying so hard to make it easier to open...and jammed a lot of fingers too in the process**
 We truly apologize to everyone affected by this.
 
 **Issue Summary**  
