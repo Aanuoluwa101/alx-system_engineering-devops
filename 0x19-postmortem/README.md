@@ -1,8 +1,8 @@
 This is a postmortem for an outage of our authentication services that happened on the 11th of June, 2023.
-I THINK WE JAMMED THE DOOR WHILE TRYING SO HARD TO MAKE IT EASIER TO OPEN...AND MAYBE JAMMED EVERYONE'S FINGERS TOO IN THE PROCESS.
+**I THINK WE JAMMED THE DOOR WHILE TRYING SO HARD TO MAKE IT EASIER TO OPEN...AND MAYBE JAMMED EVERYONE'S FINGERS TOO IN THE PROCESS.**
 We truly apologize to everyone affected by this.
 
-**Issue Summary**
+**Issue Summary**  
 From 2:30PM to 3:15PM WAT, our authentication servers could not access the database.
 The issue affected 100% of traffic and this meant that all users could not access their accounts and remained locked out from the sites functionalities. The root cause of this outage was due to 
 a software bug in our Database Management System (DBMS), introduced by a software update, causing it to crash. 
@@ -18,7 +18,7 @@ a software bug in our Database Management System (DBMS), introduced by a softwar
 - 3:04 PM: Successful update rollback and server restart begins
 - 3:15 PM: Authentication service fully functional
 
-**Root cause and resolution**
+**Root cause and resolution**  
 AT 2:30 PM WAT, a software update was pushed after multiple testing. The update
 included a bug related to query execution and memory management into our DBMS. This bug
 went unnoticed during testing but was triggered the bug and caused the DBMS to run into 
@@ -32,7 +32,7 @@ the bug in the most recent update push. AT 3:04 PM, we successfully rolled back 
 
 AT 3:15 PM, the authentication server's requests were appropriately responded to and users were able to login. 
 
-**Corrective and preventative measures**
+**Corrective and preventative measures**  
 There should be an improvement in the testing process.
 - Testing new updates under extreme conditions like unusual traffic spikes
 - Establish a quicker issue escalation workflow
